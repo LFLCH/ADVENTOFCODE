@@ -21,11 +21,11 @@ def commonChar(ls):
             return c
 
 f = open("inputday3.txt", "r")
-lines = f.read().split() # recuperate the file under the format of a list of strings
+lines = f.read().split() # recuperation of the file under the format of a list of strings
 total = 0
 
 # (Part 1) 
-# add the value of the common char between two substring to the total
+# addition of the value of the common char between two substring to the total
 # for s in lines:
 #     n = len(s)
 #     mid = math.floor(n/2)
@@ -35,11 +35,11 @@ total = 0
 #     total += charValue(c)
 
 # (Part 2)  
-# gather the lines according to the rest of the division of their index per 3 
+# gathering  the lines according to the rest of the division of their index per 3 
 l1 = lines[0::3] 
 l2 = lines[1::3]
 l3 = lines[2::3]
-# add the value of the common char between all the groups of three consecutive strings 
+# addition of the value of the common char between all the groups of three consecutive strings 
 for i in range(0,len(l1)):
     c = commonChar([l1[i],l2[i],l3[i]])
     total += charValue(c)
